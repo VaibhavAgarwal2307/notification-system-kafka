@@ -48,6 +48,8 @@ POST http://localhost:8080/notifications
 
 
 ## 🔁 Retry Logic Example
+
+
 Attempt 1 FAILED
 Attempt 2 FAILED
 Attempt 3 SUCCESS
@@ -55,20 +57,25 @@ Attempt 3 SUCCESS
 
 OR
 
+
 Attempt 1 FAILED
 Attempt 2 FAILED
 Attempt 3 FAILED → sent to DLQ
+
+
 👉 System retries failed messages up to 3 times before moving to Dead Letter Queue.
 
-
+---
 
 ## 🚀 How to Run
 
 1. Start Kafka & Zookeeper (Docker)
 2. Run Spring Boot application
 3. Use Postman to hit API:
-   POST http://localhost:8080/notifications
 
+POST http://localhost:8080/notifications
+
+---
 
 ## 💡 Why This Project?
 
