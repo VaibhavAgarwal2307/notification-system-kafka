@@ -45,24 +45,26 @@ POST http://localhost:8080/notifications
   "status": "PENDING",
   "type": "EMAIL"
 }
+```
 
----
 
 ## 🔁 Retry Logic Example
 
-Attempt 1 FAILED  
-Attempt 2 FAILED  
-Attempt 3 SUCCESS  
+```
+Attempt 1 FAILED
+Attempt 2 FAILED
+Attempt 3 SUCCESS
+```
 
-OR  
+OR
 
-Attempt 1 FAILED  
-Attempt 2 FAILED  
-Attempt 3 FAILED → sent to DLQ  
+```
+Attempt 1 FAILED
+Attempt 2 FAILED
+Attempt 3 FAILED → sent to DLQ
+```
 
 👉 System retries failed messages up to 3 times before moving to Dead Letter Queue.
-
----
 
 ## 🚀 How to Run
 
