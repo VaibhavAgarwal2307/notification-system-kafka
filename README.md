@@ -46,22 +46,19 @@ POST http://localhost:8080/notifications
   "type": "EMAIL"
 }
 
+---
 
 ## 🔁 Retry Logic Example
 
+Attempt 1 FAILED  
+Attempt 2 FAILED  
+Attempt 3 SUCCESS  
 
-Attempt 1 FAILED
-Attempt 2 FAILED
-Attempt 3 SUCCESS
+OR  
 
-
-OR
-
-
-Attempt 1 FAILED
-Attempt 2 FAILED
-Attempt 3 FAILED → sent to DLQ
-
+Attempt 1 FAILED  
+Attempt 2 FAILED  
+Attempt 3 FAILED → sent to DLQ  
 
 👉 System retries failed messages up to 3 times before moving to Dead Letter Queue.
 
@@ -69,9 +66,9 @@ Attempt 3 FAILED → sent to DLQ
 
 ## 🚀 How to Run
 
-1. Start Kafka & Zookeeper (Docker)
-2. Run Spring Boot application
-3. Use Postman to hit API:
+1. Start Kafka & Zookeeper (Docker)  
+2. Run Spring Boot application  
+3. Use Postman to hit API:  
 
 POST http://localhost:8080/notifications
 
@@ -81,7 +78,7 @@ POST http://localhost:8080/notifications
 
 This project demonstrates:
 
-- Real-world Kafka event-driven architecture
-- Fault-tolerant system design
-- Retry and Dead Letter Queue (DLQ) patterns used in production systems
-- Asynchronous processing with high reliability
+- Real-world Kafka event-driven architecture  
+- Fault-tolerant system design  
+- Retry and Dead Letter Queue (DLQ) patterns used in production systems  
+- Asynchronous processing with high reliability  
